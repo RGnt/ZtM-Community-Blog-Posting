@@ -4,6 +4,7 @@ As the community has grown and a lot of people has shown interest to write guest
 
 #### Participants
 RJniemela - Lead
+
 Erik Herbranson - Assist Lead
 
 Ocean - Aspiring Web Dev
