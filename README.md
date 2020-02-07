@@ -7,7 +7,7 @@ As the community has grown and a lot of people has shown interest to write guest
 - Erik Herbranson - Assist Lead
 - Paulo Alexandre (paulequilibrio)
 - Kyrolos - Web Developer
--Samuele Bertocco (alienpingu)
+- Samuele Bertocco (alienpingu)
 - Ocean
 - Shubhankar Chandra Banerjee (shubhankarb180)
 - Handa (handa26)
