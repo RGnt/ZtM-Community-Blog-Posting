@@ -36,6 +36,10 @@ class App extends React.Component {
 		this.unsubscribeFromAuth();
 	}
 
+	signOut() {
+		auth.signOut();
+	}
+
 	render() {
 		return (
 			<div className="App">
@@ -43,7 +47,7 @@ class App extends React.Component {
 					<div>
 						<p>Logged in as {this.state.currentUser.displayName}</p>
 						<img className="avatar" alt="user" src={this.state.currentUser.photoURL} />
-						<button onClick={() => auth.signOut()}>Log out</button>
+						<button onClick={this.signOut}>Log out</button>
 					</div>
 				) : (
 					<SignIn />
