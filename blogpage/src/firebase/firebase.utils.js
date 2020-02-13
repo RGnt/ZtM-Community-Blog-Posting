@@ -6,26 +6,27 @@ import config from './firebase.config';
 
 firebase.initializeApp(config);
 
-export const createUserProfileDocument = async (userAuth, additionalData) => {
-	if (!userAuth) return;
-	const userRef = firestore.doc(`users/${userAuth.uid}`);
-	const snapShot = await userRef.get();
+export const createAuthorDocument = async (authorAuth, additionalData) => {
+	if (!authorAuth) return;
+	console.log(authorAuth);
+	const authorRef = firestore.doc(`authors/${authorAuth.uid}`);
+	const snapShot = await authorRef.get();
 	if (!snapShot.exists) {
-		const { displayName, email, photoURL } = userAuth;
+		const { displayName, email, photoURL } = authorAuth;
 		const createdAt = new Date();
 		try {
-			await userRef.set({
-				displayName,
-				email,
-				photoURL,
+			await authorRef.set({
+				authorName: displayName,
+				authorEmail: email,
+				authorAvatar: photoURL,
 				createdAt,
 				...additionalData,
 			});
 		} catch (error) {
-			console.error('error creating user', error.message);
+			console.error('error creating author', error.message);
 		}
 	}
-	return userRef;
+	return authorRef;
 };
 
 export const auth = firebase.auth();
