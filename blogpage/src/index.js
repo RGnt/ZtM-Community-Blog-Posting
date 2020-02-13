@@ -1,11 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import ReduxWrapper from './redux/ReduxWrapper';
 
 const App = () => {
-    return(
-        <p>Hello</p>
-    )
-}
+	return <p>Hello</p>;
+};
 
-ReactDOM.render(<App />, document.getElementById('root'));
-
+ReactDOM.render(
+	<ReduxWrapper>
+		<App />
+	</ReduxWrapper>,
+	document.getElementById('root')
+);
