@@ -2,9 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import ReduxWrapper from './redux/ReduxWrapper';
 
-const App = () => {
-	return <p>Hello</p>;
-};
+import './index.css';
+import App from './App';
 
 ReactDOM.render(
 	<ReduxWrapper>
